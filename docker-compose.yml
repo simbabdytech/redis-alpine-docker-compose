@@ -7,9 +7,9 @@ volumes:
 
 services:
   redis:
-    image: redis:alpine
+    image: redis:7.4.1-alpine
     container_name: redis-server
-    command: redis-server
+    command: redis-server --requirepass 123456
     networks:
       - redis-privatenet
     ports:
